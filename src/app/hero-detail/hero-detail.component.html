@@ -1,6 +1,8 @@
 <div *ngIf="hero">
   <h2>{{hero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
+  <div><span>power: </span>{{hero.power}}</div>
+  <div><span>infinity stone power: </span>{{hero.power! | exponentialStrength:"10"}}</div>
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name"/>
